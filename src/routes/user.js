@@ -13,6 +13,6 @@ router.use(isAuthenticated)
 // Protected endpoints 
 router.get('/all', authorize('admin'), userController.getUsers)
 router.get('/:id', userController.getUser)
-router.patch('/id', userController.updateUser)
+router.patch('/:id', userController.updateUser)
 
 module.exports = router

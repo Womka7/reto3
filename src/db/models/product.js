@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize')
+/* const { Model, DataTypes } = require('sequelize')
 
 const PRODUCT_TABLE = 'PRODUCTS'
 
@@ -51,4 +51,4 @@ class Product extends Model
   }
 }
 
-module.exports = { PRODUCT_TABLE, ProductSchema, Product}
+module.exports = { PRODUCT_TABLE, ProductSchema, Product} */

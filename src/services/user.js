@@ -33,7 +33,7 @@ async function saveNewUser(username, password) {
     const userCreated = await models.Users.create({
         username: username,
         password: hashedPassword,
-        role: 'admin'
+        role: 'user'
     })
     console.log(userCreated)
 }

@@ -1,4 +1,4 @@
-
+/* 
 const { Pool } = require('pg');
 const config = require('../config/db_config');
 
@@ -119,4 +119,4 @@ class ProductService {
   }
 }
 
-module.exports = ProductService
+module.exports = ProductService */

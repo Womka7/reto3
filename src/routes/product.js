@@ -1,4 +1,4 @@
-const express = require('express');
+/* const express = require('express');
 const router = express.Router();
 const ProductService = require('../services/product')
 
@@ -70,4 +70,4 @@ router.delete('/:id', async (req, res) => {
   } 
 });
 
-module.exports = router;
+module.exports = router; */
