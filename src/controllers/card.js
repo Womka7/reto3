@@ -2,8 +2,8 @@ const cardService = require('../services/card');
 
 const createCard = async (req, res) => {
     try {
-        const { name, sex, date, description } = req.body;
-        const card = await cardService.saveNewCard(name, sex, date, description);
+        const { name, age, sex, date, description } = req.body;
+        const card = await cardService.saveNewCard(name, age, sex, date, description);
         res.json(card);
     } catch (error) {
         res.status(500).json({ error: error.message });

@@ -13,10 +13,11 @@ class Cardservice {
     return Cards
   }
 
-  async saveNewcard(name, sex, date, description)
+  async saveNewcard(name,age, sex, date, description)
   {
     const cardCreated = await models.Cards.create({
       name: name,
+      age: age,
       sex: sex,
       date: date,
       description: description
@@ -26,7 +27,7 @@ class Cardservice {
 
   }
 
-  async updatecard(cardId, name, sex, date, description)
+  async updatecard(cardId, name, age, sex, date, description)
   {
     const card = await models.Cards.findByPk(cardId)
 
@@ -37,24 +38,26 @@ class Cardservice {
 
     await card.update({
       name: name,
+      age: age,
       sex: sex,
       date: date,
       description: description
     })
-
+    
   }
-
-  async upsertcard(cardId, name, sex, date, description)
+  
+  async upsertcard(cardId, name, age, sex, date, description)
   {
     const card = await models.Cards.findByPk(cardId)
-
+    
     if (!card)
     {
-      this.saveNewcard(name, sex, date, description)
+      this.saveNewcard(name, age, sex, date, description)
     }
-
+    
     await card.update({
       name: name,
+      age: age,
       sex: sex,
       date: date,
       description: description
